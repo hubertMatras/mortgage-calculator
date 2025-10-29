@@ -1,6 +1,6 @@
-# Mortgage Calculator (FastAPI + SvelteKit)
+# Mortgage Calculator (FastAPI + React)
 
-A web-based mortgage calculator built with FastAPI (Python) and SvelteKit.
+A web-based mortgage calculator built with FastAPI (Python) and React.
 
 ## Run locally
 ```bash
