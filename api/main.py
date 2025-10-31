@@ -3,11 +3,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from models import MortgageInput, MortgageResult
 from calculations import monthly_payment, amortization_schedule
 
-app = FastAPI(title="Mortgage API", root_path="/api")
+app = FastAPI()
 
+origins = [
+    "http://localhost:5173",
+    "https://mortgage-calculator.vercel.app",
+    "https://*.vercel.app"
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://*.vercel.app"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

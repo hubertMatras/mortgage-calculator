@@ -1,6 +1,6 @@
 import type { Result } from "../types";
 
-const apiBase = import.meta.env.VITE_API_URL as string;
+const apiBase = import.meta.env.VITE_API_URL as string ?? '/api';
 
 export async function calculateMortgage(params: {
   principal: number;
