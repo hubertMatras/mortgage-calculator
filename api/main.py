@@ -6,9 +6,7 @@ from calculations import monthly_payment, amortization_schedule
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173",
-    "https://mortgage-calculator.vercel.app",
-    "https://*.vercel.app"
+    "http://localhost:5173"
 ]
 app.add_middleware(
     CORSMiddleware,
