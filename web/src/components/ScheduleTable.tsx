@@ -1,4 +1,3 @@
-import React from "react";
 import type { Row } from "../types";
 
 type Props = { rows: Row[]; limit?: number };
