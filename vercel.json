@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "cd web && npm run build",
-  "outputDirectory": "web/dist",
-  "installCommand": "cd web && npm install",
   "builds": [
     {
       "src": "api/main.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
@@ -16,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "web/dist/$1"
+      "dest": "web/$1"
     }
   ]
 }
